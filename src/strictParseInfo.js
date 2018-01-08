@@ -4,7 +4,7 @@ const InvalidKeyError=require("./errors/invalidKeyError.js");
 
 const contains=function(list,key) {
   return list.find(function(validKey){
-    return key==validKey;
+    return key.toLowerCase()==validKey.toLowerCase();
   });
 }
 

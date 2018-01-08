@@ -26,6 +26,7 @@ Parser.prototype = {
       parseInfo.currentKey=parseInfo.currentToken;
       parseInfo.currentToken="";
       parseInfo.nextFunction=this.parseValue;
+      parseInfo.currentToken = parseInfo.currentToken.toLowerCase();
       return parseInfo;
     } else {
       throw new MissingAssignmentOperatorError(parseInfo.currentPos);
